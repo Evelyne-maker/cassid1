@@ -4,6 +4,60 @@
   <meta charset="UTF-8">
   <title>Diário de Cassidy</title>
   <style>
+    .popup-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(20, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .popup {
+      background: #1a0000;
+      border: 2px solid #ff6666;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #990000;
+      padding: 40px 60px;
+      text-align: center;
+      color: #ff6666;
+      font-size: 2em;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .popup button {
+      margin-top: 30px;
+      padding: 14px 38px;
+      font-size: 1.2em;
+      background: linear-gradient(90deg, #2a0000 60%, #660000 100%);
+      color: #ff2222;
+      border: 2px solid #ff2222;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 18px #000, 0 0 8px #ff2222 inset;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #ff2222, 0 0 2px #000;
+      font-family: 'Courier New', Courier, monospace;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .popup button::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(135deg, transparent, transparent 10px, #ff222233 12px, transparent 14px);
+      pointer-events: none;
+    }
+    .popup button:hover {
+      background: linear-gradient(90deg, #660000 60%, #2a0000 100%);
+      color: #fff;
+      border-color: #fff;
+      box-shadow: 0 0 24px #ff2222, 0 0 12px #000 inset;
+      text-shadow: 0 0 12px #fff, 0 0 2px #ff2222;
+    }
     /* Fundo creepy */
     body {
       margin: 0;
@@ -48,9 +102,16 @@
 </head>
 <body>
 
-  <h1>Diário de Cassidy</h1>
+  <div class="popup-bg" id="popup-bg">
+    <div class="popup">
+      Diário de Cassidy<br>
+      <button id="ler-btn">Ler</button>
+    </div>
+  </div>
 
-  <div class="text">
+  <h1 id="main-title" style="display:none;">Diário de Cassidy</h1>
+
+  <div class="text" id="diario-text" style="display:none;">
 Sinto o ar pesado, como se algo respirasse antes de mim,
 o quarto parece menor a cada dia, as sombras alongam-se nos cantos como se tivessem vontade própria,
 cada vez que fecho os olhos, ele está lá, sempre no mesmo ponto, parado, imóvel, mas eu sei que me observa,
@@ -86,21 +147,29 @@ sinto minhas memórias se confundirem, momentos felizes se misturam a pesadelos,
 tudo que conhecia agora parece uma ilusão, uma máscara que eu uso para enganar o mundo, ou talvez a mim mesma.
   </div>
     </section>
-  <audio id="bg-music" src="musica.mp3.mp3" autoplay loop muted>
-  Seu navegador não suporta áudio.
-</audio>
-<div id="unmute-message" style="text-align:center; margin-top:20px; color:#ff6666;">
-  Clique em qualquer lugar para ativar o som da música.
-</div>
+  <audio id="bg-music" src="musica.mp3.mp3">
+    Seu navegador não suporta áudio.
+  </audio>
 <script>
   window.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('bg-music');
-    audio.play();
-    document.body.addEventListener('click', function() {
+    const popupBg = document.getElementById('popup-bg');
+    const lerBtn = document.getElementById('ler-btn');
+    const mainTitle = document.getElementById('main-title');
+    const diarioText = document.getElementById('diario-text');
+
+    // Esconde texto e título até clicar
+    mainTitle.style.display = 'none';
+    diarioText.style.display = 'none';
+
+    lerBtn.addEventListener('click', function() {
+      audio.currentTime = 0;
       audio.muted = false;
       audio.play();
-      document.getElementById('unmute-message').style.display = 'none';
-    }, { once: true });
+      popupBg.style.display = 'none';
+      mainTitle.style.display = '';
+      diarioText.style.display = '';
+    });
   });
 </script>
 </body>
