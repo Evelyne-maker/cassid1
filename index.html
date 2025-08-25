@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Diário de Cassidy</title>
+  <style>
+    /* Fundo creepy */
+    body {
+      margin: 0;
+      padding: 50px;
+      font-family: 'Courier New', Courier, monospace;
+      background: url('floresta-foda.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+      cursor: url('https://i.imgur.com/3pXclXQ.png'), auto;
+    }
+
+    /* Título mais discreto */
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #ff6666;
+      position: relative;
+      /* leve sombra para destacar, sem animação exagerada */
+      text-shadow: 1px 1px 5px #990000;
+    }
+
+    /* Texto do diário com flicker suave e ocasional */
+    .text {
+      white-space: pre-wrap;
+      font-size: 1.2em;
+      animation: flicker 6s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 90%, 100% { opacity: 1; filter: blur(0px); }
+      91%, 95% { opacity: 0.8; filter: blur(0.5px); }
+    }
+
+    /* Sombra leve ao passar o mouse */
+    .text:hover {
+      text-shadow: 0 0 8px #ff0000, 0 0 15px #ff4444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Diário de Cassidy</h1>
+
+  <div class="text">
+Sinto o ar pesado, como se algo respirasse antes de mim,
+o quarto parece menor a cada dia, as sombras alongam-se nos cantos como se tivessem vontade própria,
+cada vez que fecho os olhos, ele está lá, sempre no mesmo ponto, parado, imóvel, mas eu sei que me observa,
+o vento traz ecos de passos que não caminharam aqui, mas parecem sempre próximos.
+
+Acordo com as mãos marcadas, pequenas arranhaduras ou cortes superficiais que eu não lembro de ter feito,
+o cheiro de terra e fumaça impregnou minha pele, mesmo que eu tome banho,
+tudo que toco parece escapar antes de ser meu, cadernos que somem, objetos que aparecem em lugares errados,
+o silêncio agora carrega palavras que não entendo, mas sinto que obedecer é inevitável.
+
+Meu corpo se curva sozinho, como se tivesse vontade própria,
+a fumaça escorre pelas juntas, pelos dedos, e sinto que posso me tornar nada a qualquer momento,
+o tempo já não é linear, cada minuto é reflexo de outro que não vivi, e ainda assim sinto a mesma dor, o mesmo peso,
+os espelhos refletem mais do que deveriam, meu rosto parece desfigurado, meus olhos se alongam, minhas mãos se movem sozinhas.
+
+Olhe para a margem da visão, entre as árvores, atrás da porta, ele observa,
+não há como escapar, mas há algo a aprender se você observar com atenção,
+às vezes ouço vozes sussurrando meu nome, longe, mas dentro da minha própria cabeça,
+são suaves, insistentes, como se me guiassem para algum lugar que eu não quero ir, mas sinto que devo seguir.
+
+Rabiscos aparecem em meus cadernos, símbolos que não escrevi,
+eles formam padrões hipnóticos que me atraem e me repelem ao mesmo tempo,
+as páginas se amontoam e se espalham sozinhas, como se tivessem vontade própria,
+sinto que cada linha me puxa para dentro de algo que não posso nomear.
+
+Ecoam sussurros que ninguém mais ouve,
+se você ouvir, não responda, eles chamam pelo meu nome, e cada chamada arranca um pedaço de quem eu era,
+às vezes sinto que estou me apagando, desaparecendo lentamente, deixando apenas esta forma que o mundo vê.
+
+Eu ainda estou aqui, mas não sou mais apenas eu,
+ele está comigo, dentro de mim, e a cada noite a distância entre Cassidy e ele diminui,
+sinto minhas memórias se confundirem, momentos felizes se misturam a pesadelos, e não consigo mais distinguir onde termina Cassidy e onde começa ele,
+tudo que conhecia agora parece uma ilusão, uma máscara que eu uso para enganar o mundo, ou talvez a mim mesma.
+  </div>
+    </section>
+  <audio id="bg-music" src="musica.mp3.mp3" autoplay loop muted>
+  Seu navegador não suporta áudio.
+</audio>
+<div id="unmute-message" style="text-align:center; margin-top:20px; color:#ff6666;">
+  Clique em qualquer lugar para ativar o som da música.
+</div>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('bg-music');
+    audio.play();
+    document.body.addEventListener('click', function() {
+      audio.muted = false;
+      audio.play();
+      document.getElementById('unmute-message').style.display = 'none';
+    }, { once: true });
+  });
+</script>
+</body>
+</html>
