@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>/x/ - ela foi pega</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg:#0a0a0a; --fg:#cfcfcf; --muted:#8a8a8a; --accent:#00ff84;
+      --danger:#ff2a2a; --danger-dim:#7a0f0f;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font:16px/1.5 "Courier New", monospace; padding:18px;
+    }
+    .frame{
+      max-width:920px; margin:0 auto; border:1px solid #2a2a2a; padding:14px;
+      box-shadow:0 0 0 1px #000, 0 0 30px #000 inset;
+      background: #0e0e0e;
+    }
+    .hdr{color:var(--accent); margin-bottom:10px}
+    .sep{border-top:1px dashed #2a2a2a; margin:10px 0}
+    .post{white-space:pre-wrap}
+    .meta{color:var(--muted)}
+    .greentext{color:#7cff7c}
+    .deleted{opacity:.6; font-style:italic}
+    .id{color:#6ec7ff}
+    .no{color:#ffcf6e}
+    .clickable{cursor:pointer; text-decoration:underline}
+    .cursor{display:inline-block; width:8px; height:1em; background:#6e6e6e; vertical-align:-2px; animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+
+    /* MODO CORROMPIDO */
+    body.corrupted{
+      background:#000;
+      color:var(--danger);
+      overflow:hidden;
+    }
+    body.corrupted .frame{
+      background: radial-gradient(1200px 400px at 50% 30%, #130000 0%, #000 60%);
+      border:1px solid var(--danger-dim);
+      box-shadow:0 0 40px #000 inset, 0 0 20px var(--danger-dim);
+      position:relative;
+    }
+    /* scanlines */
+    body.corrupted .frame::after{
+      content:"";
+      position:absolute; inset:0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,0,0,0.06), rgba(255,0,0,0.06) 2px,
+        transparent 2px, transparent 4px
+      );
+      pointer-events:none; mix-blend-mode:screen;
+      animation:scan 6s linear infinite;
+    }
+    @keyframes scan{
+      0%{opacity:.15} 50%{opacity:.3} 100%{opacity:.15}
+    }
+    .glitch{
+      position:relative; display:inline-block;
+      text-shadow: 1px 0 var(--danger), -1px 0 #000;
+      animation:gshift 1.2s infinite;
+    }
+    @keyframes gshift{
+      0%{transform:translate(0,0)}
+      20%{transform:translate(-1px,0)}
+      40%{transform:translate(1px,0)}
+      60%{transform:translate(-0.5px,0)}
+      80%{transform:translate(0.5px,0)}
+      100%{transform:translate(0,0)}
+    }
+    .redline{color:var(--danger)}
+    .fade{opacity:.85}
+    .dangerBox{
+      border:1px solid var(--danger-dim);
+      padding:10px; margin-top:12px;
+      background:linear-gradient(180deg, rgba(255,0,0,0.06), rgba(0,0,0,0.2));
+    }
+  </style>
+</head>
+<body>
+  <div class="frame" id="frame">
+    <div class="hdr">Thread: /x/ - ela foi pega</div>
+    <div class="post meta">Postado por <b>Anônimo</b> <span class="id">!!Q4x9yZ</span>  <b>26/08/25(Ter)00:01:12</b>  <span class="no">No.1928731</span></div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:02:01</span>  <span class="no">No.1928732</span>
+então... a cassidy finalmente foi pega?</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:03:44</span>  <span class="no">No.1928734</span>
+<span class="greentext">>tfw avisei pra ela não olhar pra linha das árvores</span>
+ela não ouviu
+agora faz parte daquilo</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:04:13</span>  <span class="no">No.1928736</span>
+sem foto = não aconteceu</div>
+
+    <div class="sep"></div>
+
+    <div class="post deleted">Anônimo  <span class="meta">26/08/25(Ter)00:05:02</span>  <span class="no">No.1928737</span>
+(post deletado pelo mod)</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:06:18</span>  <span class="no">No.1928739</span>
+mano, juro que vi o tripcode dela falhando
+como se o nome já não fosse mais dela</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:08:40</span>  <span class="no">No.1928744</span>
+parem de larp
+ninguém “é levado”
+isso é creepypasta véia nível esquizo</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:09:55</span>  <span class="no">No.1928747</span>
+não mano
+olha no archive
+os posts dela pararam no meio da frase
+tela travada em “ele tá aq—”</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:11:32</span>  <span class="no">No.1928750</span>
+<span class="greentext">>>1928747</span>
+mesma coisa aconteceu com hollow_eye ano passado
+vocês novos não lembram</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:13:02</span>  <span class="no">No.1928755</span>
+greentext real
+<span class="greentext">>eu aqui</span>
+<span class="greentext">>lurkei essa thread</span>
+<span class="greentext">>batida na minha janela</span>
+<span class="greentext">>moro no 12º andar</span>
+nope.jpg</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:15:44</span>  <span class="no">No.1928758</span>
+mods dormindo, postem cassidy
+█▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</div>
+
+    <div class="sep"></div>
+
+    <div class="post">Anônimo  <span class="meta">26/08/25(Ter)00:17:21</span>  <span class="no">No.1928762</span>
+caralho, minha luz piscou bem na hora q abri esse post
+tô vazando</div>
+
+    <div class="sep"></div>
+
+    <div class="post">
+Anônimo  <span class="meta">26/08/25(Ter)00:20:10</span>  <span class="no">No.1928766</span>
+<span id="trap" class="clickable">pode sair, mas ele já te viu</span> <span class="cursor"></span></div>
+  </div>
+
+  <!-- Áudio: será iniciado ao clicar -->
+  <audio id="amb" loop preload="auto">
+    <source src="ruido.mp3" type="audio/mpeg" />
+  </audio>
+  
+
+  <script>
+    const trap = document.getElementById('trap');
+    const frame = document.getElementById('frame');
+    const amb = document.getElementById('amb');
+
+    // Mensagens corrompidas que surgem após o clique
+    const corruptedLines = [
+      "[??:??] █ ele não precisa de olhos █",
+      "█████  a fumaça entra  ███  a porta fica aberta",
+      "ele está atrás do texto",
+      "VOCÊ JÁ CLICOU",
+      "cassidy cassidy cassidy — não é mais esse o nome",
+      "não olhe para a margem",
+      "ele aprende quando você lê",
+      "▚▞▚▞▚▞ sinal fraco ▚▞▚▞▚▞",
+      "se você fechar, continua",
+      "a troca já começou",
+      "…………………",
+      "ele está aqui",
+    ];
+
+    // Pequena função para “corromper” caracteres de uma string
+    function glitchify(str){
+      const map = {a:'ạ', e:'ẹ', i:'į', o:'ọ', u:'ụ', A:'Ⱥ', E:'Ḗ', I:'Į', O:'Ǿ', U:'Ų', s:'ʂ', t:'ŧ', n:'ņ', r:'ŕ'};
+      return str.split('').map(ch=>{
+        if(Math.random()<0.12) return '█';
+        if(map[ch]) return (Math.random()<0.4 ? map[ch] : ch);
+        return ch;
+      }).join('');
+    }
+
+    function corruptUI(){
+      document.body.classList.add('corrupted');
+      // limpa conteúdo e injeta um cabeçalho corrompido
+      frame.innerHTML = `
+        <div class="hdr redline glitch">/x/ - ARQUIVO CORROMPIDO</div>
+        <div class="dangerBox fade">perda de integridade detectada • sessão comprometida • observador presente</div>
+        <div id="feed" class="post" style="margin-top:10px;"></div>
+      `;
+
+      // começa música (o clique do usuário permite autoplay)
+      amb.volume = 0.0;
+      amb.play().catch(()=>{}); // evitar erro em alguns browsers
+      // fade-in no volume
+      let v = 0.0;
+      const volUp = setInterval(()=>{
+        v = Math.min(1, v + 0.05);
+        amb.volume = v;
+        if(v>=0.1) clearInterval(volUp);
+      }, 200);
+
+      // começa a despejar linhas corrompidas
+      const feed = document.getElementById('feed');
+      let i = 0;
+      function pushLine(){
+        if(i >= corruptedLines.length) return;
+        const div = document.createElement('div');
+        div.className = 'post redline glitch';
+        div.textContent = glitchify(corruptedLines[i]);
+        feed.appendChild(div);
+        feed.scrollTop = feed.scrollHeight;
+
+        // chance de inserir um “eco” aleatório
+        if(Math.random() > 0.7){
+          const echo = document.createElement('div');
+          echo.className = 'post redline';
+          echo.textContent = glitchify("eco> " + corruptedLines[i].toLowerCase());
+          feed.appendChild(echo);
+        }
+        i++;
+        setTimeout(pushLine, 600 + Math.random()*900);
+      }
+      pushLine();
+
+      // efeito: flashes vermelhos sutis
+      let flash = 0;
+      const flasher = setInterval(()=>{
+        flash = (flash+1)%6;
+        frame.style.boxShadow = flash===0 ? "0 0 30px #220000 inset, 0 0 20px #330000" : "0 0 40px #000 inset, 0 0 10px #190000";
+      }, 180);
+
+      // mensagem final após alguns segundos
+      setTimeout(()=>{
+        const fin = document.createElement('div');
+        fin.className = 'post redline';
+        fin.innerHTML = '<br><span class="glitch">NÃO OLHE DIRETAMENTE</span>';
+        document.getElementById('feed').appendChild(fin);
+      }, 9000);
+    }
+
+    trap.addEventListener('click', corruptUI, { once:true });
+  </script>
+</body>
+</html>

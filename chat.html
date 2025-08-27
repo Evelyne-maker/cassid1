@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Console - Diário de Cassidy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background: #000;
+      color: #00ff00;
+      min-height: 100vh;
+      cursor: url('https://i.imgur.com/3pXclXQ.png'), auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #chat {
+      background: #001a00;
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00ff00;
+      padding: 40px 60px;
+      width: 100%;
+      max-width: 600px;
+      font-size: 1.2em;
+      color: #00ff00;
+      text-align: left;
+      margin: 0 auto;
+      display: none;
+    }
+    .line {
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .glitch {
+      color: #00ff00;
+      /* Remove background highlight */
+      text-shadow: none;
+      animation: glitch 0.4s linear 0s 1 normal;
+    }
+    @keyframes glitch {
+      0% { opacity: 1; transform: none; }
+      20% { opacity: 0.7; transform: skewX(-2deg); }
+      40% { opacity: 0.5; transform: skewX(2deg) scaleY(1.05); }
+      60% { opacity: 0.7; transform: skewX(-1deg); }
+      80% { opacity: 1; transform: none; }
+      100% { opacity: 1; transform: none; }
+    }
+    .link {
+      color: #00ff00;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.2s;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #00ff00, 0 0 2px #000;
+    }
+    .link:hover {
+      color: #fff;
+      text-shadow: 0 0 12px #00ff00, 0 0 2px #fff;
+    }
+    .blink {
+      animation: blink 1s steps(1) infinite;
+      margin-left: 6px;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    .contract-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .contract-popup {
+      background: #001a00;
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00ff00;
+      padding: 40px 60px;
+      text-align: center;
+      color: #00ff00;
+      font-size: 1.4em;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .contract-popup button {
+      margin-top: 30px;
+      padding: 14px 38px;
+      font-size: 1.2em;
+      background: linear-gradient(90deg, #001a00 60%, #004400 100%);
+      color: #00ff00;
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 18px #000, 0 0 8px #00ff00 inset;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #00ff00, 0 0 2px #000;
+      font-family: 'Courier New', Courier, monospace;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .contract-popup button:hover {
+      background: linear-gradient(90deg, #004400 60%, #001a00 100%);
+      color: #fff;
+      border-color: #fff;
+      box-shadow: 0 0 24px #00ff00, 0 0 12px #000 inset;
+      text-shadow: 0 0 12px #fff, 0 0 2px #00ff00;
+    }
+  </style>
+</head>
+<body>
+  <div class="contract-bg" id="contract-bg">
+    <div class="contract-popup">
+      <div>
+        <span style="font-size:1.1em;">Ao continuar, você aceita as consequências de acessar este site.</span>
+      </div>
+      <button id="accept-btn">ACEITAR E ENTRAR</button>
+    </div>
+  </div>
+  <div id="chat">
+    <div class="line">C:\Cassidy\Diario&gt; Você: ainda estou aqui</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: <span class="glitch">ninguém saiu</span></div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: como saio?</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: você não entende...</div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: explique</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: não é saída, é troca</div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: troca do quê?</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: <span class="glitch">seu lugar</span></div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: lugar?</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: sim, <span class="glitch">alguém precisa entrar</span> para você sair</div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: isso não faz sentido</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: você já clicou até aqui, então já aceitou</div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: aceitado o quê?</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: <span class="glitch">a troca</span></div>
+    <div class="line">C:\Cassidy\Diario&gt; Você: não, eu não—</div>
+    <div class="line">C:\Cassidy\Diario&gt; Desconhecido: o próximo link escolhe quem fica</div>
+    <br>
+    <div class="line">
+      <span class="link" onclick="nextPage()">>> ACEITAR A TROCA</span>
+      <span class="blink">█</span>
+    </div>
+  </div>
+  <audio id="bg-music" src="musica2.mp3.mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+  <script>
+    function nextPage() {
+      window.location.href = "chat3.html";
+    }
+
+    function addGhostLine() {
+      const chat = document.getElementById("chat");
+      const ghost = document.createElement("div");
+      ghost.className = "line glitch";
+      ghost.textContent = "C:\\Cassidy\\Diario> [??:??] ELES ESTÃO LENDO ATRAVÉS DE VOCÊ";
+      chat.appendChild(ghost);
+      // Aplica o efeito de glitch só quando aparecer
+      setTimeout(() => ghost.classList.remove("glitch"), 500);
+    }
+
+    // Aplica glitch ocasional nas frases marcadas
+    function randomGlitch() {
+      document.querySelectorAll('.glitch').forEach(el => {
+        el.classList.remove('glitch');
+        if (Math.random() < 0.25) { // 25% chance de glitch
+          el.classList.add('glitch');
+          setTimeout(() => el.classList.remove('glitch'), 400);
+        }
+      });
+    }
+    setInterval(randomGlitch, 2000);
+
+    const contractBg = document.getElementById('contract-bg');
+    const acceptBtn = document.getElementById('accept-btn');
+    const chatDiv = document.getElementById('chat');
+    const audio = document.getElementById('bg-music');
+
+    acceptBtn.addEventListener('click', function() {
+      contractBg.style.display = 'none';
+      chatDiv.style.display = 'block';
+      audio.currentTime = 0;
+      audio.muted = false;
+      audio.play();
+      setTimeout(addGhostLine, 8000);
+    });
+    
+  </script>
+</body>
+</html>
